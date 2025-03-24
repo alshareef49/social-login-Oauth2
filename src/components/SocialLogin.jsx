@@ -23,6 +23,10 @@ const SocialLogin = () => {
     window.location.href = "http://localhost:8080/oauth2/authorization/github";
   };
 
+  const handleTwitterLogin = () => {
+    window.location.href = "http://localhost:8080/oauth2/authorization/twitter";
+  };
+
   // Save token in cookies after login success
   const saveToken = (token) => {
     Cookies.set("token", token, {
@@ -153,7 +157,7 @@ const SocialLogin = () => {
             src={xIcon}
             alt="X Icon"
             className="w-8 h-8 rounded-full bg-white p-1 border border-gray-300 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110"
-            onClick={handleGoogleLogin}
+            onClick={handleTwitterLogin}
           />
           {/* Facebook Icon */}
           <img
